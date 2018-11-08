@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/lato/lato.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(window).on('load', function() {
+            $preloader = $('.preloader');
+            $logo = $('.header-logo');
+            $logo.fadeIn(1000);
+            $preloader.delay(1000).fadeOut(1000);
+
+        });
+    </script>
+    <title>Splashform</title>
+</head>
+
+<body>
+    <div class="preloader">
+
+    </div>
+    <div class="slide spacer">
+        <div class="slide header">
+            <div class="container">
+                <ul class="navbar">
+                    <li>обо мне</li>
+                    <li>работы</li>
+                    <li>отзывы</li>
+                    <li>контакты</li>
+                </ul>
+                <img src="./images/ouroboros-w.png" alt="Ouroboros logotype" class="logo-white">
+                <div class="maintitle">
+                    splashform
+                </div>
+                <span>
+                    persistent perfection
+                </span>
+                <div class="header-logo">
+
+                    <!-- 
+                        WTF IS GOING ON
+                        <div class="header-logo-snake"></div>
+                    -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide fade">
+        <div class="container">
+            <span class="slide-title">обо мне</span>
+            <img src="./images/ouroboros-w.png" alt="Ouroboros logotype" class="logo-white">
+        </div>
+        <div class="container about-cont">
+            <div class="about-column">
+                <img src="" alt="" class="about-photo">
+                <span class="about-text">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                </span>
+            </div>
+            <div class="about-column">
+
+                <span class="about-text">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                </span>
+                <img src="" alt="" class="about-photo">
+            </div>
+        </div>
+    </div>
+    <div class="slide puzzle">
+        <div class="container">
+            <span class="slide-title">мои работы</span>
+            <img src="./images/ouroboros-w.png" alt="Ouroboros logotype" class="logo-white">
+        </div>
+        <div class="container works">
+            <a href="" class="works-image" style="background-image: url(./images/works/vinculum.jpg)"><span>Vinculum</span></a>
+            <a href="" class="works-image" style="background-image: url(./images/works/darkwater.jpg)"><span>Dark Water</span></a>
+            <a href="" class="works-image" style="background-image: url(./images/works/honu.jpg)"><span>Honu</span></a>
+            <a href="" class="works-image" style="background-image: url(./images/works/ouroboros.jpg)"><span>Ouroboros</span></a>
+            <a href="" class="works-image" style="background-image: url(./images/works/sova.jpg)"><span>Сова</span></a>
+            <a href="" class="works-image" style="background-image: url(./images/works/skat.jpg)"><span>Скат</span></a>
+            <a href="" class="works-image" style="background-image: url(./images/works/oskolki.jpg)"><span>Осколки</span></a>
+            <a href="" class="works-image" style="background-image: url(./images/works/businy.jpg)"><span>Бусины</span></a>
+        </div>
+    </div>
+    <!-- <div class="slide fade">
+        <div class="container">
+            <span class="slide-title">отзывы</span>
+            <img src="./images/ouroboros-w.png" alt="Ouroboros logotype" class="logo-white">
+        </div>
+    </div> -->
+    <div class="slide fade">
+        <div class="container">
+            <span class="slide-title">контакты</span>
+            <img src="./images/ouroboros-w.png" alt="Ouroboros logotype" class="logo-white">
+            <div class="contacts">
+                <a class="contacts-element" href="#" style="grid-area: vk;"><img src="images/vk.png"></a>
+                <a class="contacts-element" href="#" style="grid-area: tg;"><img src="images/tg.png"></a>
+                <a class="contacts-element" href="#" style="grid-area: in;"><img src="images/in.png"></a>
+                <a class="contacts-element" href="#" style="grid-area: wa;"><img src="images/wa.png"></a>
+            </div>
+        </div>
+    </div>
+    <div class="slide puzzle">
+        <div class="container">
+
+            <span class="feed-title">Подпишитесь на e-mail-рассылку и узнавайте о всех новостях первыми</span>
+            <form>
+                <input class="email" name="email" type="text" placeholder="Введите ваш адрес e-mail ...">
+                <button class="subscribe" name="subscribe" onclick="alert('JOJO')">Подписаться</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,866 @@
+/*дружелюбные инпуты*/
+
+input[type="text"] {
+    padding-left: 30px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/*подключение шрифтов*/
+
+@font-face {
+    font-family: 'Academy-Regular';
+    src: url('../fonts/AcademyCTT Regular.eot');
+    src: local('☺'), url('../fonts/AcademyCTT Regular.woff') format('woff'), url('../fonts/AcademyCTT Regular.ttf') format('truetype'), url('../fonts/AcademyCTT Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial-Narrow';
+    src: url('../fonts/ARIALN.eot');
+    src: local('☺'), url('../fonts/ARIALN.woff') format('woff'), url('../fonts/ARIALN.ttf') format('truetype'), url('../fonts/ARIALN.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Georgia-Regular';
+    src: url('../fonts/georgia.eot');
+    src: local('☺'), url('../fonts/georgia.woff') format('woff'), url('../fonts/georgia.ttf') format('truetype'), url('../fonts/georgia.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Georgia-Bold';
+    src: url('../fonts/georgiab.eot');
+    src: local('☺'), url('../fonts/georgiab.woff') format('woff'), url('../fonts/georgiab.ttf') format('truetype'), url('../fonts/georgiab.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+}
+
+
+/* серый фон по бокам */
+
+body {
+    background: url("../img/left.png") top left repeat-y, url("../img/right.png") top right repeat-y;
+}
+
+main {
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: url(../img/header-bckg.png) no-repeat;
+    background-position: right;
+    padding: 60px 60px 60px 40px;
+    box-sizing: border-box;
+}
+
+.header-logo {
+    width: 400px;
+    height: 100%;
+    background: url(../img/logo.png) no-repeat;
+    background-position: 50%;
+    margin-right: 20px;
+}
+
+.header-title {
+    width: 900px;
+    font-family: Academy-Regular, serif;
+    color: white;
+    font-size: 4.2rem;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header-contacts-phone {
+    color: white;
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.header-contacts-socials {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-contacts-socials a {
+    margin-left: 10px;
+}
+
+
+/* контейнер менюшки,во всю ширину */
+
+.menu-container {
+    background-color: #a41f30;
+    border: 7px solid #7b0616;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+
+/* само меню */
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1100px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+/* обработка ссылок и пунктов списка */
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu>li:first-child {
+    display: none;
+}
+
+.menu>li a {
+    display: inline-block;
+    width: 220px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    color: white;
+    font-family: Georgia-Regular, serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2.4rem;
+}
+
+.menu>li:hover {
+    background-color: #5b5b5b;
+}
+
+.sub-menu {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity, .5s;
+    margin: 0;
+    padding: 10px 0 0 0;
+    z-index: 10;
+}
+
+li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu li a {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(91, 91, 91, .8)
+}
+
+.sub-menu li a:hover {
+    background-color: rgba(164, 31, 48, .8)
+}
+
+
+/* контент страницы, общий 9с боковыми афишой и репертуаром */
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1600px;
+    background-color: white;
+}
+
+
+/* контент непосредственно страницы */
+
+.content-page {
+    width: 1200px;
+    padding: 60px 0 0 75px;
+    font-size: 1.6rem;
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+}
+
+
+/* общий стиль для секций (табы, новости, актеры) */
+
+.content-page>section {
+    width: 1080px;
+    margin: 0 auto 35px;
+    font-size: 1.6rem;
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+}
+
+
+/* красный заголовок */
+
+.title {
+    display: block;
+    font-family: Georgia-Bold, serif;
+    color: #b02f41;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+
+/* здесь и далее - стилизация и работоспособность табов и контента табов */
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 40px auto 0;
+}
+
+.tabs input[type=radio] {
+    display: none;
+}
+
+.tabs label {
+    display: inline-block;
+    margin-right: -5px;
+    width: 108px;
+    height: 33px;
+    background-color: #a41f30;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 2px solid #a41f30;
+    border-bottom: 0;
+    color: white;
+    line-height: 35px;
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-sizing: border-box;
+}
+
+.tabs label span {
+    display: none;
+}
+
+.tabs label:hover {
+    background-color: #b02f41;
+}
+
+.tab-content {
+    margin-top: -2px;
+    display: none;
+    width: 100%;
+    min-height: 525px;
+    box-sizing: border-box;
+    border: 2px solid #a41f30;
+    background-color: #ffffff;
+}
+
+.tabs [id^="r-tab"]:checked+label {
+    background: #FFF;
+    color: #a41f30;
+}
+
+#r-tab-1:checked~#r-tab-content-1,
+#r-tab-2:checked~#r-tab-content-2,
+#r-tab-3:checked~#r-tab-content-3,
+#r-tab-4:checked~#r-tab-content-4,
+#r-tab-5:checked~#r-tab-content-5,
+#r-tab-6:checked~#r-tab-content-6,
+#r-tab-7:checked~#r-tab-content-7,
+#r-tab-8:checked~#r-tab-content-8,
+#r-tab-9:checked~#r-tab-content-9,
+#r-tab-10:checked~#r-tab-content-10 {
+    display: block;
+}
+
+.tabs [id^="c-tab"]:checked+label {
+    background: #FFF;
+    color: #a41f30;
+}
+
+#c-tab-1:checked~#c-tab-content-1,
+#c-tab-2:checked~#c-tab-content-2,
+#c-tab-3:checked~#c-tab-content-3,
+#c-tab-4:checked~#c-tab-content-4,
+#c-tab-5:checked~#c-tab-content-5,
+#c-tab-6:checked~#c-tab-content-6,
+#c-tab-7:checked~#c-tab-content-7,
+#c-tab-8:checked~#c-tab-content-8,
+#c-tab-9:checked~#c-tab-content-9,
+#c-tab-10:checked~#c-tab-content-10 {
+    display: block;
+}
+
+.tab-content-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 27px 27px 25px 27px;
+}
+
+.tab-content-info-photo img {
+    width: 175px;
+    height: 175px;
+}
+
+.tab-content-info-name {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.tab-content-info-name-hall {
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    color: #a41f30;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.tab-content-info-name-title {
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    color: #5b5b5b;
+    text-transform: uppercase;
+    font-size: 3.6rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.tab-content-info-name-author {
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    color: #a41f30;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.tab-content-info-name-short {
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    color: #a41f30;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.tab-content-info-time {
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    color: #5b5b5b;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.tab-content-desc {
+    padding: 0 27px 27px;
+    text-align: justify;
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 20px;
+}
+
+
+/* контейнер новостей */
+
+.news {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 250px;
+    margin: 45px 0 80px;
+}
+
+
+/* разделитель */
+
+.separator {
+    width: 20px;
+    background-image: url("../img/newssep.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+
+/* контейнер для каждой новости */
+
+.news-element {
+    width: 430px;
+    height: 240px;
+}
+
+.news-date {
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    color: #a41f30;
+    font-size: 1.4rem;
+    margin-right: 25px;
+}
+
+.news-title {
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    color: #5b5b5b;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.news-preview {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.news-preview img {
+    width: 150px;
+    height: 160px;
+    margin-right: 25px;
+}
+
+.news-preview input[type=button] {
+    display: block;
+    border: 0;
+    background-color: #a41f30;
+    color: white;
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.news-preview input[type=button]:hover {
+    background-color: #b02f41
+}
+
+.news-preview input[type=button]:active {
+    background-color: #7b0616;
+}
+
+.news-desc {
+    font-family: Arial-Narrow, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 18px;
+    width: 250px;
+    text-align: justify;
+}
+
+
+/* раздел с актерами */
+
+.content-page__actors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #5b5b5b;
+    padding: 25px 75px;
+    box-sizing: border-box;
+}
+
+.actor-title {
+    color: white;
+    width: inherit;
+    margin-bottom: 30px;
+}
+
+.actor-photo img {
+    margin: 0 auto;
+    width: 97px;
+    height: 145px;
+}
+
+.actor-photo>span {
+    font-size: 1.6rem;
+    color: white;
+    font-family: Georgia-Regular, serif;
+    text-align: center;
+}
+
+.actor-photo>span:nth-of-type(1) {
+    display: block;
+    text-transform: capitalize;
+}
+
+.actor-photo>span:nth-of-type(2) {
+    display: block;
+    text-transform: uppercase;
+}
+
+footer {
+    width: inherit;
+    height: 135px;
+    background-image: url('../img/footer.png');
+    display: flex;
+    flex-direction: row;
+    padding: 25px 0 25px 110px;
+    box-sizing: border-box;
+}
+
+.copyrights {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.copyrights span {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.links {
+    width: 50%;
+}
+
+.links a {
+    display: block;
+    text-transform: uppercase;
+}
+
+.metrika {
+    width: 100px;
+    height: 50px;
+    align-self: flex-end;
+}
+
+
+/* левое меню - отображается только при разрешении экрана более 1600 */
+
+.content-info {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.content-info div {
+    margin-bottom: 50px;
+}
+
+.afisha {
+    background-image: url("../img/afisha-bg.png");
+    width: 303px;
+    height: 553px;
+    position: relative;
+}
+
+.afisha img {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+
+.repertoir {
+    width: 278px;
+    height: 443px
+}
+
+.repertoir-title {
+    text-align: center;
+    padding: 7px;
+    color: white;
+    font-family: Georgia-Regular, serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: block;
+    background-color: #5b5b5b;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 10px;
+}
+
+.repertoir img {
+    border: 7px solid #adb3b3;
+}
+
+
+/* медиа-запросы. в основном уменьшается .content, .content-page под разрешение до следующего схлопывания - то есть при разрешении от 768 до 992 контент будет размером в 768, при разрешении от 576 до 768 - контент будет 576. */
+
+@media (max-width: 1600px) {
+    body {
+        background-size: 200px;
+    }
+    main {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .header {
+        padding: 30px 30px 30px 20px;
+    }
+    .header-logo {
+        width: 300px;
+        background-size: 80%;
+    }
+    .header-title {
+        width: 650px;
+    }
+    .menu>li a {
+        width: 170px;
+        font-size: 2rem;
+    }
+    .content {
+        width: 1200px;
+    }
+    .content-page {
+        padding: 75px 0;
+    }
+    .content-info {
+        display: none;
+    }
+    .copyrights {
+        width: 50%;
+    }
+    .links {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1200px) {
+    html,
+    body {
+        font-size: 9px;
+        background-size: 160px;
+    }
+    main {
+        width: 992px;
+    }
+    .header-title {
+        width: 475px;
+    }
+    .header-logo {
+        width: 265px;
+        height: 196px;
+    }
+    .header-contacts {
+        height: 200px;
+    }
+    .header-contacts-phone {
+        margin-bottom: 50px;
+    }
+    .menu {
+        width: 992px;
+    }
+    .menu>li a {
+        width: 140px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 1.8rem;
+    }
+    .content {
+        width: 992px;
+    }
+    .content-page {
+        width: 912px;
+        margin: 0 auto;
+    }
+    .content-page>section {
+        width: 912px;
+    }
+    .tabs label {
+        width: 90px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .tab-content {
+        margin-top: -2px;
+    }
+    .news-element {
+        width: 400px;
+        padding-top: 10px;
+    }
+    .news-preview {
+        margin-top: 35px;
+    }
+    .news-preview img {
+        width: 128px;
+        height: 136px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        width: 768px;
+    }
+    .header-logo {
+        width: 287px;
+    }
+    .header-contacts-phone {
+        font-size: 2rem;
+    }
+    .header-contacts-socials img {
+        width: 20px;
+        height: 20px;
+    }
+    .header-contacts-socials a {
+        margin: 0 10px 0 0;
+    }
+    .menu {
+        width: 768px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menu li {
+        display: none;
+    }
+    .menu>li:first-child {
+        display: block;
+        margin: 0 auto;
+    }
+    .menu:hover>li,
+    .menu:hover>li a,
+    .menu:hover .sub-menu li {
+        display: block;
+        margin: 0 auto;
+    }
+    .menu:hover>li:hover ul.sub-menu {
+        visibility: visible;
+        display: block;
+        position: relative;
+    }
+    .content {
+        width: 768px;
+    }
+    .content-page {
+        width: 760px;
+        margin: 0 auto;
+    }
+    .content-page>section {
+        width: 760px;
+    }
+    .title {
+        padding-left: 10px;
+    }
+    .tabs label {
+        width: 75px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 1.4rem
+    }
+    .news-element {
+        width: 300px;
+    }
+    .news-preview img {
+        width: 115px;
+        height: 122px;
+        margin-right: 10px;
+    }
+    .news-desc {
+        width: 175px;
+    }
+    .content-page__actors {
+        padding: 25px;
+    }
+    .copyrights {
+        width: 60%;
+    }
+    .links {
+        width: 30%
+    }
+    footer {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 576px;
+    }
+    .header-logo {
+        display: none;
+    }
+    .header-title {
+        padding: 20px;
+    }
+    .menu {
+        width: 576px;
+    }
+    .content {
+        width: 576px;
+    }
+    .content-page {
+        width: 560px;
+    }
+    .content-page>section {
+        width: 560px;
+    }
+    .tabs label {
+        width: 55px;
+        overflow: hidden;
+    }
+    .tab-content {
+        margin-top: -4px;
+    }
+    .tab-content-info-photo img {
+        width: 120px;
+        height: 120px;
+    }
+    .news {
+        flex-direction: column;
+        height: auto;
+    }
+    .news-element {
+        margin: 0 auto;
+    }
+    .news-desc {
+        font-size: 1.2rem;
+        width: 130px;
+    }
+    .separator {
+        display: none;
+    }
+}

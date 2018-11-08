@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Шахтинский драматический Театр</title>
+    <meta name="viewport" content="width=device-width,  shrink-to-fit=yes">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <a>
+                <div class="header-logo"></div>
+            </a>
+            <div class="header-title"><a>Шахтинский<br>Драматический<br>Театр</a></div>
+            <div class="header-contacts">
+                <div class="header-contacts-phone">(8636) 22-75-08</div>
+                <div class="header-contacts-socials">
+                    <a href="#"><img src="./img/in.png"></a>
+                    <a href="#"><img src="./img/fb.png"></a>
+                    <a href="#"><img src="./img/vk.png"></a>
+                    <a href="#"><img src="./img/ok.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-container">
+            <ul class="menu">
+                <li><a class="sandwich">меню</a></li>
+                <li>
+                    <a href="">НОВОСТИ</a>
+                </li>
+                <li>
+                    <a href="">о театре</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="">история</a>
+                        </li>
+                        <li>
+                            <a href="">документы</a>
+                        </li>
+                        <li>
+                            <a href="">руководство</a>
+                        </li>
+                        <li>
+                            <a href="">план зала</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">репертуар</a>
+                </li>
+                <li>
+                    <a href="">труппа</a>
+                </li>
+                <li>
+                    <a href="">контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- заглушка слайдера -->
+        <div style="width:inherit; height:550px; position:relative; background-image: url('./img/339536.jpg'); background-position:50%;">
+            <div style="position:absolute; bottom:0; width:100%;height:50px; background-color: rgba(91,91,91,.5)"></div>
+        </div>
+
+        <div class="content">
+            <!-- контейнер для всего содержимого -->
+
+            <div class="content-page">
+                <!-- контейнер для содержимого самой страницы -->
+                <section class="content-page__repertoir">
+                    <!-- контейнер репертуара, управляется через .content-page>section  -->
+                    <span class="title">
+                        Новости
+                    </span>
+                    <div class="tabs ">
+                        <!-- Вкладки. Для каждого раздела со вкладками свои id (r-tab-*/r-tabs для репертуара, c-tab-*/c-tabs для детских спектаклей) -->
+                        <input type="radio" name="r-tabs" id="r-tab-1" checked>
+                        <label for="r-tab-1">
+                            5 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-2">
+                        <label for="r-tab-2">
+                            8 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-3">
+                        <label for="r-tab-3">
+                            11 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-4">
+                        <label for="r-tab-4">
+                            12 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-5">
+                        <label for="r-tab-5">
+                            18 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-6">
+                        <label for="r-tab-6">
+                            19 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-7">
+                        <label for="r-tab-7">
+                            25 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-8">
+                        <label for="r-tab-8">
+                            25 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-9">
+                        <label for="r-tab-9">
+                            25 августа
+                        </label>
+                        <input type="radio" name="r-tabs" id="r-tab-10">
+                        <label for="r-tab-10">
+                            25 августа
+                        </label>
+                        <!-- Контент вкладок. По клику r-tab-n отображается r-tab-content-n , важна структура - работает только с "братскими" (в css ~) элементами DOM, то есть radio-button и div с контентом должны находится на одном уровне вложенности-->
+                        <div id="r-tab-content-1" class="tab-content">
+                            <div class="tab-content-info">
+                                <div class="tab-content-info-photo">
+                                    <img src="./img/play.jpg" alt="">
+                                </div>
+                                <div class="tab-content-info-name">
+                                    <span class="tab-content-info-name-hall">Камерный зал</span>
+                                    <span class="tab-content-info-name-title">Призрак замка кентервиль</span>
+                                    <span class="tab-content-info-name-author">В. Баские, В. Вербин</span>
+                                    <span class="tab-content-info-name-short">Музыкальный спекталь в двух действиях</span>
+                                </div>
+                                <div class="tab-content-info-time">18.00</div>
+                            </div>
+                            <div class="tab-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi voluptates consequatur inventore laudantium! Deserunt quod minus facere delectus exercitationem, aperiam aliquam ad, ratione quas natus, vel dignissimos
+                                culpa error esse cumque optio. Dolores sed quaerat fugit quos cumque enim delectus nostrum ipsa sapiente harum rerum assumenda quisquam tempore ad quas, earum ducimus esse minima. Incidunt nulla molestiae modi officia perferendis,
+                                dignissimos velit officiis accusamus magnam excepturi id eveniet molestias iure consequatur facilis aut voluptate sint eos. Odit at quas asperiores consequatur hic incidunt corrupti qui molestiae unde, voluptatum dolor
+                                quam ea! Quis eos nam ipsum expedita, provident rerum reiciendis amet molestiae! Voluptatem voluptatibus alias eligendi mollitia quo necessitatibus porro? Laudantium quaerat nemo dolorem voluptatum magni ut, architecto
+                                ad voluptates mollitia sapiente voluptate rerum ducimus nihil, qui quia rem dicta corrupti sequi, dolorum alias at? Vitae distinctio maiores tempora nam similique, facere error porro officiis praesentium, dolor fuga voluptatum,
+                                pariatur sequi animi exercitationem eveniet. Quod suscipit dolor commodi aspernatur tempora pariatur unde molestiae voluptatibus ex, nobis ut natus vitae, explicabo libero illum. Dolorem quam mollitia corporis ad voluptatum
+                                cupiditate, nihil laborum illum eius earum possimus enim iure laboriosam id veniam ullam fugiat nesciunt molestiae in. Rerum dicta laboriosam quod vero facilis, corporis quae, molestiae magni officia culpa voluptas, ad
+                                totam soluta consectetur architecto commodi tempora. Architecto sunt inventore cum non deserunt reprehenderit ullam voluptatem adipisci! Error ea harum vero delectus veniam ut placeat sint quae odit cum, perferendis dolorum
+                                numquam esse nobis velit aliquid excepturi explicabo. Blanditiis et soluta consequatur.</div>
+                        </div>
+
+                        <div id="r-tab-content-2" class="tab-content">
+                            <div class="tab-content-info">
+                                <div class="tab-content-info-photo">
+                                    <img src="./img/play2.jpg" alt="">
+                                </div>
+                                <div class="tab-content-info-name">
+                                    <span class="tab-content-info-name-hall">Большой зал</span>
+                                    <span class="tab-content-info-name-title">Кошкин Дом</span>
+                                    <span class="tab-content-info-name-author">С.Маршак</span>
+                                    <span class="tab-content-info-name-short">Музыкальная сказка в одном действии</span>
+                                </div>
+                                <div class="tab-content-info-time">12.00</div>
+                            </div>
+                            <div class="tab-content-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi voluptates consequatur inventore laudantium! Deserunt quod minus facere delectus exercitationem, aperiam aliquam ad, ratione quas natus, vel dignissimos culpa error esse cumque optio.
+                                Dolores sed quaerat fugit quos cumque enim delectus nostrum ipsa sapiente harum rerum assumenda quisquam tempore ad quas, earum ducimus esse minima. Incidunt nulla molestiae modi officia perferendis, dignissimos velit officiis
+                                accusamus magnam excepturi id eveniet molestias iure consequatur facilis aut voluptate sint eos. Odit at quas asperiores consequatur hic incidunt corrupti qui molestiae unde, voluptatum dolor quam ea! Quis eos nam ipsum
+                                expedita, provident rerum reiciendis amet molestiae! Voluptatem voluptatibus alias eligendi mollitia quo necessitatibus porro? Laudantium quaerat nemo dolorem voluptatum magni ut, architecto ad voluptates mollitia sapiente
+                                voluptate rerum ducimus nihil, qui quia rem dicta corrupti sequi, dolorum alias at? Vitae distinctio maiores tempora nam similique, facere error porro officiis praesentium, dolor fuga voluptatum, pariatur sequi animi exercitationem
+                                eveniet. Quod suscipit dolor commodi aspernatur tempora pariatur unde molestiae voluptatibus ex, nobis ut natus vitae, explicabo libero illum. Dolorem quam mollitia corporis ad voluptatum cupiditate, nihil laborum illum
+                                eius earum possimus enim iure laboriosam id veniam ullam fugiat nesciunt molestiae in. Rerum dicta laboriosam quod vero facilis, corporis quae, molestiae magni officia culpa voluptas, ad totam soluta consectetur architecto
+                                commodi tempora. Architecto sunt inventore cum non deserunt reprehenderit ullam voluptatem adipisci! Error ea harum vero delectus veniam ut placeat sint quae odit cum, perferendis dolorum numquam esse nobis velit aliquid
+                                excepturi explicabo. Blanditiis et soluta consequatur.
+                            </div>
+                        </div>
+
+                        <div id="r-tab-content-3" class="tab-content">
+
+                        </div>
+                        <div id="r-tab-content-4" class="tab-content">
+
+                        </div>
+                        <div id="r-tab-content-5" class="tab-content">
+
+                        </div>
+                        <div id="r-tab-content-6" class="tab-content">
+
+                        </div>
+                        <div id="r-tab-content-7" class="tab-content">
+
+                        </div>
+                        <div id="r-tab-content-8" class="tab-content">
+
+                        </div>
+                        <div id="r-tab-content-9" class="tab-content">
+
+                        </div>
+                        <div id="r-tab-content-10" class="tab-content">
+
+                        </div>
+                    </div>
+                </section>
+                <section class="content-page__children">
+                    <span class="title">
+                        детские спектакли
+                    </span>
+                    <div class="tabs ">
+                        <!-- Вкладки -->
+                        <input type="radio" name="c-tabs" id="c-tab-1" checked>
+                        <label for="c-tab-1">
+                            6 августа
+                        </label>
+                        <input type="radio" name="c-tabs" id="c-tab-2">
+                        <label for="c-tab-2">
+                            7 августа
+                        </label>
+                        <input type="radio" name="c-tabs" id="c-tab-3">
+                        <label for="c-tab-3">
+                            13 августа
+                        </label>
+                        <input type="radio" name="c-tabs" id="c-tab-4">
+                        <label for="c-tab-4">
+                            20 августа
+                        </label>
+                        <input type="radio" name="c-tabs" id="c-tab-5">
+                        <label for="c-tab-5">
+                            27 августа
+                        </label>
+                        <!-- Контент вкладок -->
+                        <div id="c-tab-content-1" class="tab-content">
+                            <div class="tab-content-info">
+                                <div class="tab-content-info-photo">
+                                    <img src="./img/play2.jpg" alt="">
+                                </div>
+                                <div class="tab-content-info-name">
+                                    <span class="tab-content-info-name-hall">Большой зал</span>
+                                    <span class="tab-content-info-name-title">Кошкин Дом</span>
+                                    <span class="tab-content-info-name-author">С.Маршак</span>
+                                    <span class="tab-content-info-name-short">Музыкальная сказка в одном действии</span>
+                                </div>
+                                <div class="tab-content-info-time">12.00</div>
+                            </div>
+                            <div class="tab-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi voluptates consequatur inventore laudantium! Deserunt quod minus facere delectus exercitationem, aperiam aliquam ad, ratione quas natus, vel dignissimos
+                                culpa error esse cumque optio. Dolores sed quaerat fugit quos cumque enim delectus nostrum ipsa sapiente harum rerum assumenda quisquam tempore ad quas, earum ducimus esse minima. Incidunt nulla molestiae modi officia perferendis,
+                                dignissimos velit officiis accusamus magnam excepturi id eveniet molestias iure consequatur facilis aut voluptate sint eos. Odit at quas asperiores consequatur hic incidunt corrupti qui molestiae unde, voluptatum dolor
+                                quam ea! Quis eos nam ipsum expedita, provident rerum reiciendis amet molestiae! Voluptatem voluptatibus alias eligendi mollitia quo necessitatibus porro? Laudantium quaerat nemo dolorem voluptatum magni ut, architecto
+                                ad voluptates mollitia sapiente voluptate rerum ducimus nihil, qui quia rem dicta corrupti sequi, dolorum alias at? Vitae distinctio maiores tempora nam similique, facere error porro officiis praesentium, dolor fuga voluptatum,
+                                pariatur sequi animi exercitationem eveniet. Quod suscipit dolor commodi aspernatur tempora pariatur unde molestiae voluptatibus ex, nobis ut natus vitae, explicabo libero illum. Dolorem quam mollitia corporis ad voluptatum
+                                cupiditate, nihil laborum illum eius earum possimus enim iure laboriosam id veniam ullam fugiat nesciunt molestiae in. Rerum dicta laboriosam quod vero facilis, corporis quae, molestiae magni officia culpa voluptas, ad
+                                totam soluta consectetur architecto commodi tempora. Architecto sunt inventore cum non deserunt reprehenderit ullam voluptatem adipisci! Error ea harum vero delectus veniam ut placeat sint quae odit cum, perferendis dolorum
+                                numquam esse nobis velit aliquid excepturi explicabo. Blanditiis et soluta consequatur.</div>
+                        </div>
+
+                        <div id="c-tab-content-2" class="tab-content">
+
+                        </div>
+
+                        <div id="c-tab-content-3" class="tab-content">
+
+                        </div>
+                        <div id="c-tab-content-4" class="tab-content">
+
+                        </div>
+                        <div id="c-tab-content-5" class="tab-content">
+
+                        </div>
+                    </div>
+                </section>
+                <section class="content-page__news">
+                    <span class="title">Новости театра</span>
+                    <div class="news">
+                        <div class="separator"></div>
+                        <div class="news-element">
+                            <span class="news-date">
+                                    07.08.2018
+                                </span>
+                            <span class="news-title">
+                                    14 октябряв камерном зале Шахтинского драматического театра состоится спектакль "Пушкин"
+                                </span>
+                            <div class="news-preview">
+                                <img src="img/news1.jpg">
+                                <div class="news-desc">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quidem veritatis saepe numquam, praesentium quibusdam enim explicabo ex.
+                                </div>
+                                <input type="button" value="подробнее" class="mews-more">
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="news-element">
+                            <span class="news-date">
+                                                07.08.2018
+                                    </span>
+                            <span class="news-title">
+                                                14 октябряв камерном зале Шахтинского драматического театра состоится спектакль "Пушкин"
+                                    </span>
+                            <div class="news-preview">
+                                <img src="http://iluxaicu.beget.tech/templates/drama/img/news2.jpg">
+                                <div class="news-desc">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quidem veritatis saepe numquam, praesentium quibusdam enim explicabo ex.
+                                </div>
+                                <input type="button" value="подробнее" class="mews-more">
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+                </section>
+                <section class="content-page__actors">
+                    <span class="title actor-title">
+                            актерский состав
+                        </span>
+                    <div class="actor-photo">
+                        <img src="./img/actor1.jpg" alt="">
+                        <span>eлизавета</span>
+                        <span>добринская</span>
+                    </div>
+                    <div class="actor-photo">
+                        <img src="./img/actor2.jpg" alt="">
+                        <span>александр</span><span>качалов</span>
+                    </div>
+                    <div class="actor-photo">
+                        <img src="./img/actor3.jpg" alt="">
+                        <span>Наталья</span><span>Маслова</span>
+                    </div>
+                    <div class="actor-photo">
+                        <img src="./img/actor4.jpg" alt="">
+                        <span>Роман</span><span>Гольцев</span>
+                    </div>
+                    <div class="actor-photo">
+                        <img src="./img/actor5.jpg" alt="">
+                        <span>Светлана</span><span>Козаренко</span>
+                    </div>
+                </section>
+
+            </div>
+            <div class="content-info">
+                <div class="afisha">
+                    <img src="./img/afisha-cont1.jpg" alt="">
+                </div>
+                <div class="repertoir">
+                    <span class="repertoir-title">репертуар</span>
+                    <img src="./img/repertoir-cont1.jpg" alt="">
+                </div>
+                <div>
+                    <a href="#"><img src="./img/gosuslugi.png"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="./img/min-kult.png"></a>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="copyrights">
+                <span>© Шахтинский драматический театр, 2018</span>
+                <a href="#">Полититка конфиденциальности и защиты информации</a>
+            </div>
+            <div class="links">
+                <a href="#">Новости</a>
+                <a href="#">о театре</a>
+                <a href="#">репертуар</a>
+                <a href="#">труппа</a>
+                <a href="#">контакты</a>
+
+            </div>
+            <div class="metrika"></div>
+        </footer>
+    </main>
+    <script>
+        function sizeSubMenu() {
+            var contWidth = document.querySelector('.menu').clientWidth;
+            var numItems = document.querySelectorAll('.menu>li').length - 1;
+            var sizeItem = contWidth / numItems;
+            var allItems = document.querySelectorAll('.menu li');
+            allItems.forEach(function(item, i, allItems) {
+                item.style.width = sizeItem + "px";
+            });
+        }
+        sizeSubMenu();
+        window.addEventListener("resize", function() {
+            sizeSubMenu();
+        })
+    </script>
+</body>
+
+
+</html>

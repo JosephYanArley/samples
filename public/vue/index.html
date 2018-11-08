@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Starting Vue.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.min.css" />
+</head>
+
+<body class="container">
+
+    <div id="app">
+        <div v-if="!preview">
+
+            <label for="firstName">Имя</label>
+            <input type="text" class="form-control" id="firstName" v-model="firstName">
+            <label for="lastName">Фамилия</label>
+            <input type="text" id="lastName" class="form-control" v-model="lastName">
+            <label for="mail">Адрес электронной почты</label>
+            <input type="email" class="form-control" id="mail" v-model="mail">
+            <label for="phone">Номер телефона</label>
+            <input type="text" id="phone" class="form-control" v-model="phone">
+            <span>Список приглашенных гостей</span>
+            <div class="alert alert-info" v-show="!guests.length==0">Для удаления гостя два раза кликните по имени</div>
+            <hr>
+            <button class="btn btn-primary" @click="guests.push('')">Добавить</button>
+            <template v-for="(guest, key) in guests">
+                 <hr>
+                <label :for="key +'g'" @dblClick="guests.splice(key, 1)">Гость {{ key + 1 }}</label>
+                <input :id="key +'g'" type="text" v-model="guests[key]" class="form-control">
+            </template>
+            <hr>
+            <button class="btn btn-success" @click="preview=true">Предпросмотр</button>
+        </div>
+        <table class="table table-bordered" v-if="preview">
+            <th colspan="2">Предпросмотр</th>
+            <tr>
+                <td>Имя</td>
+                <td>{{ fullName }}</td>
+            </tr>
+            <tr>
+                <td>Контактные данные</td>
+                <td>{{ phone }} <br> {{ mail }}</td>
+            </tr>
+            <tr>
+                <td>Приглашенные гости</td>
+                <td>
+                    <span v-for="guest in guests">{{ guest }}, <br></span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!---->
+
+
+    <script src="./vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

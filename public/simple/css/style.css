@@ -1,0 +1,280 @@
+input[type="text"]:focus {
+    outline: none;
+}
+
+
+/*дружелюбные инпуты*/
+
+button:focus {
+    outline: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: BebasNeueRegular;
+    src: url(../fonts/BebasNeueRegular.otf);
+}
+
+@font-face {
+    font-family: BebasNeueBook;
+    src: url(../fonts/BebasNeueBook.otf);
+}
+
+
+/*CODE BY ANTON POZDNYAKOV*/
+
+
+/*senior.pozdant@yandex.ru*/
+
+.slide {
+    width: 100%;
+    padding-top: 60px;
+}
+
+body {
+    min-width: 1000px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+}
+
+.background-layer {
+    background: url("../img/bckg.jpg") 50%;
+    height: 960px;
+    background-size: cover;
+    position: relative;
+}
+
+.navigation {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 25px 0 0 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation-logo {
+    height: 73px;
+    width: 73px;
+    background: url("../img/logo.png") 50%;
+    margin-right: 200px;
+}
+
+.navigation-bar {
+    color: #ffffff;
+}
+
+.navigation-bar>li {
+    display: inline-block;
+}
+
+.navigation-bar>li>a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Lato";
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.33;
+    margin-right: 50px;
+}
+
+.main {
+    flex-direction: column;
+}
+
+.main-title {
+    font-family: "Lato";
+    font-size: 3.25rem;
+    font-weight: 300;
+    line-height: 1.19;
+    text-align: left;
+    color: #ffffff;
+    text-shadow: 0px 1px 1px #808080;
+}
+
+.main-desc {
+    display: block;
+    max-width: 400px;
+    font-family: "Lato";
+    font-size: 0.875rem;
+    line-height: 1.79;
+    text-align: left;
+    color: #ffffff;
+    text-shadow: 0px 1px 1px #808080;
+}
+
+.background-layer-shader1 {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    bottom: -10px;
+    height: 100px;
+    width: 100%;
+    opacity: 0.5;
+    transform: rotate(0.33deg);
+}
+
+.background-layer-shader2 {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    bottom: -20px;
+    height: 65px;
+    width: 100%;
+    opacity: 1;
+    transform: rotate(1deg);
+}
+
+.quotes {
+    padding: 100px 0;
+}
+
+.quotes-scroll {
+    width: 250px;
+    color: #fe992a;
+    position: relative;
+}
+
+.quotes-scroll-text {
+    position: absolute;
+    font-family: "Lato";
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #fe992a;
+    text-align: left;
+    font-weight: 400;
+    display: none;
+}
+
+.vis {
+    display: block;
+}
+
+.quotes-scroll-text::before {
+    content: '“';
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.quotes-scroll-text::after {
+    content: '”';
+    display: block;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.quotes-full {
+    width: 600px;
+    font-family: "Lato";
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    text-align: left;
+    color: #737c85;
+}
+
+.quotes-full-header {
+    font-family: "Lato";
+    font-size: 1.5rem;
+    color: #fe992a;
+    text-align: left;
+    font-weight: 400;
+}
+
+.quote-srcoll-buttons {
+    position: absolute;
+    bottom: -30px;
+}
+
+.quote-scroll-navigation {
+    font-weight: bold;
+    background-color: #fe992a;
+    border: none;
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.quote-scroll-navigation:hover {
+    background-color: #ffba6e;
+}
+
+.background-contacts {
+    width: 100%;
+    background-color: #e77774;
+}
+
+.contacts-full {
+    width: 25%;
+}
+
+.contacts-full-bar {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts-full-bar>li>a {
+    color: white;
+    text-decoration: none;
+    line-height: 2rem;
+    font-size: .75rem;
+    font-family: "Open Sans";
+}
+
+.contacts-navi {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contacts-navi-bar {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts-navi-bar>li>a {
+    color: white;
+    text-decoration: none;
+    line-height: 2rem;
+    font-size: .75rem;
+    font-family: "Open Sans";
+}
+
+.contacts-navi-bar>li:first-child>a {
+    font-weight: bold;
+}
+
+.copyrights {
+    padding: 30px 0;
+}
+
+footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #3a4d60;
+    font-family: "Open Sans";
+}
+
+footer span {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #3a4d60;
+    font-family: "Open Sans";
+}
